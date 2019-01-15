@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+div{
+   
+  background-color: greenyellow;
+    width: 400px;
+    height: 200px;
+    margin-top: 170px;
+    margin-left: 5px;
+   border: 2px solid lightcoral;
+}
+body{
+    background-color:gold;
+}
+
+        
+    </style>
+ 
+    <title>Document</title>
+    <script>
+        function add(){
+    var a=document.getElementById('a');
+    var b=document.getElementById('b');
+    var c=document.getElementById('rlt');
+    c.value= +a.value + +b.value;
+}
+function sub(){
+    var a=document.getElementById('a');
+    var b=document.getElementById('b');
+    var c=document.getElementById('rlt');
+    c.value = +a.value - +b.value;
+}
+function mul(){
+    var a=document.getElementById('a');
+    var b=document.getElementById('b');
+    var c=document.getElementById('rlt');
+    c.value = +a.value * +b.value;
+}
+function div(){
+    var a=document.getElementById('a');
+    var b=document.getElementById('b');
+    var c=document.getElementById('rlt');
+    c.value = +a.value / +b.value;
+        if(b.value == 0){
+            alert(" 0 not divide any number");
+        }
+}
+
+    </script>   
+</head>
+<body>
+    <center>
+    <h1>Calculator</h1>
+        <div>
+            <br>
+                    
+                <input type="text" id="rlt" placeholder="Result"><br> <br>    
+                <input type="number" id="a" placeholder="1st Value"><br>
+                <input type="number" id="b" placeholder="2nd Value"><br>
+          
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mul()">*</button>
+            <button onclick="div()">/</button>
+        </div>
+  
+    </center>
+ 
+</body>
+</html>
